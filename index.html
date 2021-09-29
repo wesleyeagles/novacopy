@@ -11,27 +11,101 @@
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300&display=swap');
 
 
-    body {
 
-        background-color: pink;
-    }
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: pink;
+  overflow-y: hidden;
+  overflow-x: hidden;
+
+}
+
+.icon {
+  position: relative;
+  width: 1500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 300px;
+}
+
+.icon path {
+  fill: transparent;
+  stroke-width: 10;
+  stroke: #ff31e4;
+  stroke-dasharray: 1580;
+  stroke-dashoffset: 0;
+}
+
+.icon:hover path {
+  animation: animate 2s linear forwards;
+}
+
+@keyframes animate
+{
+  0%
+  {
+    stroke-dashoffset: 0;
+  }
+  40%
+  {
+    stroke-dashoffset: 1580;
+  }
+  80%
+  {
+    stroke-dashoffset: 3160;
+    fill: transparent; 
+  }
+   100%
+  {
+    stroke-dashoffset: 3160;
+    fill: #ff31e4; 
+  }  
+}
     h1 {
 
         text-align: center;
         justify-content: center;
         align-items: center;
         position: relative;
-        top: 400px;
+        right: 740px;
         font-weight: bold;
         color: white;
         font-family: 'Comic Neue', cursive;
+        width: 1000px;
     }
+
 </style>
 <body>
 
+    
 
 
-    <h1>SEJA BEM VINDA NOVA COPY</h1>
+
+
+    <div class="icon heart">
+        <svg viewBox="-5 0 521 512" >
+            
+      
+              <path d="M376,30c-27.783,0-53.255,8.804-75.707,26.168c-21.525,16.647-35.856,37.85-44.293,53.268
+                  c-8.437-15.419-22.768-36.621-44.293-53.268C189.255,38.804,163.783,30,136,30C58.468,30,0,93.417,0,177.514
+                  c0,90.854,72.943,153.015,183.369,247.118c18.752,15.981,40.007,34.095,62.099,53.414C248.38,480.596,252.12,482,256,482
+                  s7.62-1.404,10.532-3.953c22.094-19.322,43.348-37.435,62.111-53.425C439.057,330.529,512,268.368,512,177.514
+                  C512,93.417,453.532,30,376,30z"/>
+          
+      </svg>
+      <h1>SEJA BEM VINDA NOVA COPY</h1>
+      </div>
+
+      
     
 </body>
 </html>
